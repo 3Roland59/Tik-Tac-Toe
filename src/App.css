@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root{
+  background-color: #636363;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.board {
+  background: rgb(58, 26, 13);
+  margin: 20px;
+  width: 190px;
+  height: 190px;
+  border: 2px solid #000000;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 10px;
+  gap: 5px;
+  border-radius: 10px;
+  box-shadow: 0 0 0 3px;
+}
+
+.box{
+  border: 1px solid white;
+  background: rgb(80, 62, 36);
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  font-weight: 800;
+  color: white;
+  cursor: pointer;
+}
+
+.status{
+  color: white;
+  border-radius: 10px;
+  border: 1px solid #000000;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  background: #00000085;
+}
+
+.game-info{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  height: max-content;
+  width: 250px;
+  background: #00000085;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  display: none;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.info-dis{
+  display: flex;
+}
+
+.ol{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: max-content;
+}
+
+.list{
+  list-style: none;
+  width: max-content;
+}
+
+.list-btn{
+  width: 150px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transform: translateX(-20px);
+  margin: auto;
+}
+
+.list-btn:hover{
   color: white;
+  background-color: rgb(58, 26, 13);
+  box-shadow: 0 0 2px 2px #000;
 }
 
-.App-link {
-  color: #61dafb;
+#history{
+margin: 10px;
+margin-bottom: 30px;
+transform: translateX(40px);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.win-box{
+  color: blue;
+  border: 2px solid blue;
 }
